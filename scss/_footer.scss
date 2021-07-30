@@ -1,0 +1,82 @@
+/* start section footer*/
+footer{
+    background-color:$footerBac;
+    padding: 20px;
+    color: #fff;
+    overflow: hidden;
+    @include prefixs(box-sizing,border-box);
+
+    h3{
+        text-transform: capitalize;
+        line-height: 53px;
+        padding: 10px 0;
+    }
+
+  .footer-logo{
+    img{
+        width: 100px;
+        height: 100px;
+        @include prefixs(border-radius,20px);
+    }
+    span{
+        text-transform: uppercase;
+        font-weight: bold;
+        font-size: 25px;
+    }
+    ul{
+        margin-left: 30px;
+        margin-top: 10px;
+        text-align: center;
+        li{
+            display: inline-block;
+            margin-left: 20px;
+
+            a{
+                display: block;
+                width: 50px;
+                height: 50px;
+                line-height: 50px;
+                background-color: #fff;
+                @include prefixs(border-radius,50%);
+                @include prefixs(transition,all .4s ease-in-out);
+                &:hover{
+                    background-color: $btnHoverColor;
+                    color: #fff;
+                    transform: scale(1.2);
+                }
+                .fa{
+                    font-size: 20px;
+                }
+            }
+        }
+    }
+  }
+  .footer-about{
+      p{
+          text-transform: capitalize;
+          font-size: 18px;
+      }
+  }
+  .footer-contact{
+      .fa{
+          padding-right: 10px;
+        margin-bottom: 5px;
+      }
+      a{
+          text-decoration: none;
+          &:hover{
+            color: #fff;
+          }
+      }
+  }
+.footer-work-hour{
+    ul{
+        li{
+            margin-bottom: 5px;
+        }
+    }
+}
+    
+    
+}
+/* End section footer*/

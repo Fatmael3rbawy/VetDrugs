@@ -1,0 +1,108 @@
+/*start section profile content*/
+.profile{
+    background-image: url("../images/login.jpeg");
+    background-size: cover;
+    position: relative;
+    padding-bottom: 20px;
+
+
+    .profile-content{
+        margin-top: 200px;
+        position: relative;
+        z-index: 2;
+        border: 1px solid #fff;
+        @include prefixs(border-radius,20px 20px  0 0);
+        .profile-bacground{
+            width: 100%;
+            height: 350px;
+            position: relative;
+            img{
+                width: 100%;
+                height: 100%;
+                @include prefixs(border-radius,20px 20px  0 0)
+            }
+            .img-upload-cover{
+                position: absolute;
+                bottom: 20px;
+                left: 20px;
+                background: #333;
+                padding: 10px 15px;
+                color: #fff;
+                @include prefixs(border-radius,10px);
+
+                .fa-camera{
+                    font-size: 25px;
+                    cursor: pointer;
+                }
+            }
+        }
+        .prifile-image{
+            position: relative;
+            width: 200px;
+            height: 120px;
+            margin:20px auto;
+            top: -100px;
+            color: #fff;
+            @media #{$maxMobile} {
+                left: 15%;
+            }
+            img{
+                width: 150px;
+                height: 150px;border: 2px solid #222;
+              
+                @include prefixs(border-radius,50%);
+            }
+            
+            .img-upload-profile{
+                position: absolute;
+                top: 103%;
+                left: 15px;
+                .fa-camera{
+                    color: #fff;
+                    cursor: pointer;
+                    font-size: 25px;
+                }
+                h3{
+                    margin-top: 20px;
+                    text-transform: capitalize;
+                }
+                
+            }
+        }
+        form{
+            padding: 10px 30px;
+            overflow: hidden;
+            label{
+                text-transform: capitalize;
+                font-size: 20px;
+                display: block;
+                margin-bottom: 15px;
+                color: #fff;
+            }
+            input{
+                margin-bottom: 10px;
+                width: 60%;
+                @include prefixs(border-radius,10px);
+                padding: 6px;
+                border: 1px solid #3333;
+                @media #{$maxMobile} {
+                    width: 100%;
+                }
+            }
+            input[type=submit]{
+                width: 70px;
+                position: absolute;
+                right: 126px;
+                padding: 10px;
+                border: 1px solid #fff;
+                @include prefixs(border-radius,10px 0);
+            }
+            .edit{
+                float: right;
+                text-transform: capitalize;
+            }
+        }
+    }
+}
+
+/*End section profile content*/

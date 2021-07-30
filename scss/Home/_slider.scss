@@ -1,0 +1,22 @@
+
+/*start section slider*/
+.slider{
+
+    overflow: hidden;
+    height: 690px;
+
+    .carousel-inner{
+        .carousel-item{
+            img{
+                height: 700px;
+            }
+        }
+
+        .carousel-control-next, .carousel-control-prev{
+            z-index: 5;
+        }
+    }
+    
+}
+
+/*End section slider*/

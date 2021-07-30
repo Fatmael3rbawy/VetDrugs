@@ -1,0 +1,235 @@
+/* start section add product*/
+.add-product{
+    overflow: hidden;
+    margin-top: 70px;
+    position: relative;
+    background-image: url("../images/login.jpgeg");
+        background-size: cover;
+    .add-header{
+        position: relative;
+        margin-top: 60px;
+        z-index: 2;
+        h2{
+            @include header-border;
+            margin-bottom: 60px;
+            color:#fff;
+            font-size: 40px;
+            font-weight: bold;
+            font-style: italic;
+        }
+    }
+    form{
+        border: 2px solid #333;
+        padding: 20px;
+        background-color: rgba(2,2,2,.3);
+        @include prefixs(border-radius, 20px);
+        margin-bottom: 30px;
+        overflow: hidden;
+        position: relative;
+        z-index: 3;
+
+        .product-image{
+            margin-left: 118px;
+            margin-bottom: 20px;
+            @media #{$maxMobile} {
+                margin-left: -2px;
+            }
+            @media #{$minSmall} and #{$maxSmall} {
+                margin-left: 0;
+            }
+            img{
+                width: 600px;
+                height: 200px;
+                margin: 10px auto;
+                @media #{$maxMobile} {
+                    width: 100%;
+                }
+                @media #{$minSmall} and #{$maxSmall} {
+                    width: 100%;
+                }
+            }
+
+        }
+        
+        .input-group{
+            margin-bottom: 20px;
+            .name{
+                margin-left: 77px;
+            }
+            
+            .company{
+                margin-left: 44px;
+            }
+            .price{
+                margin-left: 85px;
+            }
+            .description{
+                margin-left: 18px;
+            }
+            
+            label{
+                text-transform: capitalize;
+                padding-right: 10px;
+                font-weight: bold;
+                font-size: 20px;
+                color: #fff;
+            }
+        
+        }
+        .button{
+            float: right;
+        }
+    }    
+}
+
+/* End section add product*/
+
+/* start section my product */
+.myproduct{
+    overflow: hidden;
+    background-image: url("../images/login.jpeg");
+    background-size: cover;
+   @media #{$maxMobile} {
+       margin-top: 100px;
+   }
+   .product_header{
+    position: relative;
+    margin-top: 100px;
+    h2{
+        @include header-border;
+        margin-bottom: 60px;
+        color:#000;
+        font-size: 40px;
+        font-weight: bold;
+        font-style: italic;
+    }
+}
+    .product-content{
+        margin-top: 60px;
+        
+    }
+    .myproduct-left{
+        overflow: auto;
+        height: 500px;
+        border: 2px solid;
+        padding: 20px;
+        margin-bottom: 30px;
+        @include prefixs(border-radius,20px);
+       background-color: #77777754;
+        .search{
+            
+            margin-bottom: 24px;
+            padding: 10px;
+            @media #{$maxMobile} {
+                margin-left: 10px;
+            }
+            @media #{$minSmall}  and #{$maxSmall} {
+                margin-left:10px;
+            }
+            .button{
+                width: 32%;
+                float: right;
+                margin-left: 75px;
+                text-decoration: none;
+                @media #{$maxMobile} {
+                    margin-left: 20px;
+                }
+            }
+            .form-inline {
+                width: 50%;
+                   float: left; 
+                .form-control{
+                    border-radius: 0;
+                    width: 100%;
+                   
+                }
+                .btn{
+                    position: relative;
+                    left: 95%;
+                    bottom: 38px;
+                    border-radius: 0;
+                    background-color: $secendColor;
+                    @media #{$maxMobile} {
+                        bottom: 48px;
+                    }
+                   
+                    i{
+                        color: #fff;
+                        font-size: 16px;
+                    }
+                }
+            }
+        }
+        .product{
+            border: 1px solid;
+            @include prefixs(border-radius,20px);
+            background-color: #211fafe6;
+            padding: 10px;
+            margin: auto;
+            width:500px;
+            margin-bottom: 30px;
+            @media #{$maxMobile} {
+                width: 100%;
+            }
+            @media #{$minSmall} and #{$maxSmall} {
+                width: 100%;
+            }
+            
+            .product-image{
+                width: 60%;
+                float: left;
+                margin-left: 20px;
+                margin-bottom: 20px;
+                @media #{$maxMobile} {
+                    margin-left: 10px;
+                }
+                
+                img{
+                    width: 300px;
+                    height: 200px;
+                    @include prefixs(border-radius,20px);
+                    @media #{$maxMobile} {
+                        width: 150px;
+                    }
+                }
+            }
+            .controle-button{
+                width: 10%;
+                float: left;
+                margin-left: 30px;
+                @media #{$maxMobile} {
+                    margin-left: 5px;
+                }
+                @media #{$minSmall} and #{$maxSmall} {
+                    margin-left: 30px;
+                }
+            }
+            h4{
+                text-transform: capitalize;
+                display: inline-block;
+                font-size: 20px;
+                font-weight: bold;
+                color: #000;
+            }
+            span{
+                padding-left: 20px;
+                font-size: 20px;
+                font-weight: bold;
+                color:#fff;
+            }
+        }
+
+    }
+    
+}
+/* End section my product */
+
+/*start page products*/
+.product-header{
+    background-size: cover;
+    margin-bottom: 100px;
+    @media #{$maxMobile} {
+        height: 300px;
+    }
+}
+/*End page products*/

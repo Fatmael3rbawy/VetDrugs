@@ -1,0 +1,130 @@
+/*start section events in my event*/
+.events{
+    background-image: url("../images/login.jpeg");
+    background-size: cover;
+    background-repeat: no-repeat;
+    overflow: hidden;
+    margin-top: 70px;
+    padding: 20px;
+    padding-top: 50px;
+    position: relative;
+    @media #{$maxMobile} {
+        margin-top: 100px;
+    }
+    .myevent-header{
+        position: relative;
+        z-index: 2;
+        margin-bottom: 30px;
+        h2{
+            @include header-border;
+            color: #fff;
+        }
+    }
+    
+    .add{
+        float: right;
+        text-transform: capitalize;
+    }
+    form{
+        border: 2px solid $formbordercolor;
+        padding: 20px;
+        background-color: rgba(4,4,4,.3);
+        @include prefixs(border-radius, 20px);
+        margin-bottom: 30px;
+        position: relative;
+        z-index: 2;
+        overflow: hidden;
+        
+        .event-image{
+            width: 100%;
+            margin: auto;
+            margin-bottom: 30px;
+            position: relative;
+            img{
+                width: 100%;
+                height: 300px;
+                @include prefixs(border-radius,20px);
+                @media #{$maxMobile} {
+                    height: 200px;
+                }
+            } 
+            .fa-camera{
+                position: absolute;
+                left: 20px;
+                bottom: 3px;
+                font-size: 40px;
+                color: #fff;
+                cursor: pointer;
+
+            }   
+        }
+        .input-group{
+            margin-top: 20px;
+            margin-bottom: 20px;
+            @include prefixs(border-radius,10px);
+            .name{
+                margin-left: 30px;
+            }
+            
+            .time{
+                margin-left: 80px;
+            }
+            .location{
+                margin-left: 55px;
+            }
+            .about-event{
+                margin-left: 72px;
+                
+            }
+            
+            label{
+                text-transform: capitalize;
+                padding-right: 10px;
+                font-weight: bold;
+                color: #fff;
+            }
+        
+        }
+    }  
+  
+}
+/*End section events in  my event*/
+
+/*start section event in events page*/
+.main-event{
+    margin-top: 70px;
+    @media #{$maxMedium} {
+        margin-top: 100px;
+    }
+
+    .events-header{
+        position: relative;
+        height: 400px;
+        background-image: url("../images/events/adoption-home.jpg");
+        background-size: cover;
+        
+        .event-header-content{
+            position: relative;
+            z-index: 2;
+            color: #fff;
+            margin-top: 120px;
+            @media #{$maxMobile} {
+                margin-top: 60px;
+            }
+            h2{
+                @include header-border;
+                margin-bottom: 40px;
+            }
+            .lead{
+                text-transform: capitalize;
+                font-size: 18px;
+                font-weight: bold;
+            }
+        }
+    }
+    .event-home{
+        margin-top: 100px;
+    }
+   
+}
+/*End section event in events page*/

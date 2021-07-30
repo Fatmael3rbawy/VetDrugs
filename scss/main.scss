@@ -1,0 +1,19 @@
+@import "./helps/mixin";
+@import "./helps/variables";
+
+*{
+    @include prefixs(box-sizing,border-box);
+}
+
+@import "./navbar";
+@import "./Home/slider";
+@import "./Home/homecontent";
+@import "./events";
+@import "./_register";
+@import "./contact";
+@import "./profile";
+@import "./orders";
+@import "./products";
+@import "./chat";
+@import "./Home/about";
+@import "./footer";

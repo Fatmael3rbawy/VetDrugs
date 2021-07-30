@@ -1,0 +1,7 @@
+{
+"version": 3,
+"mappings": "AACA,uBAAuB;AACvB,QAAQ;EACJ,WAAW,EAAE,KAAK;EAClB,YAAG;IACC,KAAK,EAAE,IAAI;IACX,MAAM,EAAE,IAAI;;AAGpB,qBAAqB",
+"sources": ["../scss/Asideprofile.scss"],
+"names": [],
+"file": "Asideprofile.css"
+}

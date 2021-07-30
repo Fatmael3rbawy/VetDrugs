@@ -1,0 +1,85 @@
+
+//mixin prefixs
+@mixin prefixs($prop,$val) {
+    #{"-webkit-"+$prop}:$val;
+    #{"-moz-"+$prop}:$val;
+    #{"-o-"+$prop}:$val;
+    #{"-ms-"+$prop}:$val;
+    #{$prop}:$val
+}
+
+//mixin overlay
+@mixin overlay($bac) {
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    width: 100%;
+    height: 100%;
+    z-index: 1;
+    background-color: $bac;
+}
+
+//navbar border bottom
+@mixin nav-border-btn($wid) {
+    &:before{
+        content: "";  
+        background-color:#333;
+        height: 2px;
+        display: block;
+        position: relative;
+        top: 30px;
+        left:0;
+        right: 0;
+        bottom:0;
+        width: $wid;
+        transition: width .3s ease-in-out;
+    }
+}
+
+//border bottom for header
+@mixin header-border {
+    text-transform: capitalize;
+    color: $headerColor;
+    font-size: 40px;
+    font-weight: bold;
+    font-style: italic;
+    @include prefixs(text-shadow, 2px 7px 3px #999);
+    &:before{
+        content: "";
+        position: absolute;
+        top: 50px;
+        left: 45%;
+        background: $mainColor;
+        height: 3px;
+        width: 50px;
+    }
+}
+//meun arrow in chat
+
+@mixin arrows($top , $left) {
+    
+        background-color: #777;
+        padding: 6px;
+        margin-top: 24px;
+        position: relative;
+        z-index: 5;
+        text-align: center;
+        width: 100px;
+        @include prefixs(border-radius, 10px );
+        &:before{
+            content: "";
+            width: 20px;
+            height: 20px;
+            background-color: #777;
+            position: absolute;
+            top: $top;
+            left: $left;
+            border-top: 1px solid #777;
+            border-left: 1px solid #777;
+            transform: rotate(45deg);
+            
+        }
+    
+}

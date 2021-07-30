@@ -1,0 +1,451 @@
+@import "./helps/mixin";
+@import "./helps/variables";
+
+/*start navbar*/
+nav{
+    background-color: $secendColor;
+    .Navbar{
+        height: 60px;
+        line-height: 60px;
+        overflow: hidden;
+        .logo{
+            width: 40%;
+            float: left;
+            h2{
+                text-transform: capitalize;
+                color: #fff;
+            }
+        }
+        .nav-header{
+            width: 60%;
+            float: left;
+            h2{
+                text-transform: uppercase;
+                color: #fff;
+                line-height: 60px;
+            }
+        }
+    }
+}
+/*End navbar*/
+/*start section log in*/
+.login{
+    background-image: url("../images/login.jpeg");
+    background-size: cover;
+    background-repeat: no-repeat;
+    position: relative;
+   
+   
+    .log-content{
+        padding: 30px;
+        position: relative;
+        z-index: 2;
+        @media #{$maxMobile} {
+            width: 100%;
+            padding: 10px;
+        }
+        .log-header{
+        color: #000;
+        text-align: center;
+        padding: 0 10px;
+        margin-top: 50px;
+            h1{
+                text-transform: uppercase;
+                font-weight: bold;
+                letter-spacing: 2px;
+                line-height: .4;
+                margin-bottom: 30px;
+                @media #{$maxMobile} {
+                    font-size: 22px;
+                    margin-bottom: 30px;
+                }
+            }
+            .lead{
+                font-size: 25px;
+                font-weight: 400;
+                margin-bottom: 30px;
+                text-transform: capitalize;
+                @media #{$maxMobile} {
+                    font-size: 18px;
+                    margin-bottom: 30px;
+                }
+            }
+        }
+        /*start forme */
+        form{
+            background-color:rgba(2,2,2,.5);
+            overflow: hidden;
+            padding: 20px;
+            width: 400px;
+            margin: 10px auto;
+            position: relative;
+            @include prefixs(border-radius,20px);
+            @media #{$maxMobile} {
+                width: 100%;
+                padding: 10px;
+            }
+            .form-header{
+                overflow: hidden;
+                .form-header-content{
+                    width: 80%;
+                    float: left;
+                    h2{
+                        color: #fff;
+                        text-transform: uppercase;
+                        @media #{$maxMobile} {
+                            font-size: 22px;
+                        }
+                    }
+                    
+                }
+                .fa{
+                    width: 10%;
+                    float: right;
+                    color:#555;
+                    font-weight: bold;
+                    overflow: hidden;
+                    @media #{$maxMobile} {
+                        width: 20%;
+                    }
+                }
+                .lead{
+                    text-transform: capitalize;
+                    color: #fff;
+                    margin-bottom: 30px;
+                    font-size: 18px;
+                    @media #{$maxMobile} {
+                        font-size: 15px;
+                        margin-top: 45px;
+                    }
+                }
+                
+            }
+            .email{
+                margin-bottom: 20px;
+            }
+            input[type=email],input[type=password]{
+                width: 95%;
+                padding: 10px;
+                border: none;
+                @include prefixs(border-radius,10px);
+
+            }
+            .spass{
+                position: relative;
+                .fa-eye{
+                    position: absolute;
+                    right: 30px;
+                    top: 10px;
+                    cursor: pointer;
+                }
+            }
+            .button{
+                display: block;
+                text-align: center;
+                width: 95%;
+                margin: 20px 0;
+                text-decoration: none;
+            }
+            .checkd{
+                position: relative;
+                margin-top: 25px;
+                width: 60%;
+                float: left;
+                @media (max-width:399px) {
+                    width: 100%;
+                }
+                input[type=checkbox]{
+                    @include prefixs(appearance, none);
+                    &:checked +label{
+                        &:after{
+                            transform:  scale(1) rotate(0);
+                        }
+                    }
+                }
+                .checke{
+                    padding-left: 45px;
+                    color: #fff;
+                    font-size: 18px;
+                    cursor: pointer;
+                    font-weight: 300;
+                    @media #{$minSmall} and#{$maxSmall} {
+                        font-size: 15px;
+                    }
+                    &:before{
+                        content: "";
+                        width: 23px;
+                        height: 20px;
+                        display: inline-block;
+                        background-color: #fff;
+                        border: 1px solid #fff;
+                        position: absolute;
+                        top: 5px;
+                        left: 15px;
+                    }
+    
+                    &:after{
+                        font-family: "fontAwesome";
+                        content: "\f00c";
+                        width: 23px;
+                        height: 20px;
+                        display: inline-block;
+                        background-color: $secendColor;
+                        border: 1px solid $secendColor;
+                        position: absolute;
+                        top: 5px;
+                        left: 15px;
+                        text-align: center;
+                        font-size: 15px;
+                        color: #fff;
+                        transform:  scale(0) rotate(360deg);
+                        @include prefixs(transition,all .3s ease-in-out);
+                    }
+                }
+
+            }
+            .signup_des{
+                color: #fff;
+                font-weight: 500;
+                padding: 5px;  
+            }
+            .signup_link{
+                color: $secendColor;
+                font-weight: bold;
+                padding: 5px;
+                text-decoration: none;
+            }
+            .forget-password{
+                width: 40%;
+                float: left;
+                margin-top: 25px;
+                @media (max-width:399px) {
+                    width: 53%;
+                    float: right;
+                    margin-top: 10px;
+                }
+                a{
+                    text-decoration: none;
+                    color: #fff;
+                    
+                    &:hover{
+                        color: red;
+                    }
+                }
+            }
+        }
+        /*start forme */
+        .social{
+            width: 500px;
+            margin: 30px auto;
+            margin-bottom: 0;
+            padding: 10px;
+            @media #{$maxMobile} {
+                width: 100%;
+            }
+            h3{
+                text-align: center;
+                font-size: 22px;
+                text-transform: uppercase;
+                word-spacing: 3;
+                line-height: 3;
+                color: #000;
+            }
+            ul{
+                li{
+                    display: inline-block;
+                    margin-left: 20px;
+                    @include prefixs(transition,all .4s ease-in-out);
+                    @media #{$maxMobile} {
+                       margin-left: 35px;
+                       display: block;
+                       width: 270px;
+                       text-align: center;
+                    }
+                    @media (max-width:320px) {
+                        margin-left: 10px;
+                    }
+                    &:hover{
+                        background-color: #fff;
+                        
+                    }
+                    a{
+                        text-decoration: none;
+                        text-transform: capitalize;
+                        font-weight: bold;
+                        color: #fff;
+                        @include prefixs(transition,all .4s ease-in-out);
+                        &:hover{
+                            color: $btnHoverColor;
+                        }
+                    }
+                }
+            }
+        }
+    }
+   
+}
+       
+/*End section log in*/
+
+/*start section sin up*/
+.signup{
+    @extend .login;
+    .signup-content{
+        padding: 20px;
+        position: relative;
+        z-index: 2;
+        .sign-header{
+            color: #000;
+            text-align: center;
+            padding: 0 10px;
+            margin-top: 50px;
+            margin-bottom: 50px;
+            h3{
+                text-transform: capitalize;
+            }
+        }
+        .form-content{
+            background-color: rgba(5,5,5,.7);
+            padding: 20px;
+            position: relative;
+            z-index: 2;
+            .form-header{
+                text-align: center;
+                margin-bottom: 50px;
+                h2{
+                    text-transform: capitalize;
+                    color: #000;
+                }
+            }
+            form{
+                 padding: 20px;
+                .form-social{
+                    background-color: $secendColor;
+                    height: 80px;
+                    line-height: 80px;
+                    width: 250px;
+                    @include prefixs(border-radius,20px);
+                    position: absolute;
+                    top: 75px;
+                     left: 90px;
+                     @media #{$maxMobile} {
+                         left: 50px;
+                         width: 200px;
+                     }
+                    ul{
+                        li{
+                            display: inline-block;
+                            margin-left: 25px;
+                            @include prefixs(transition,all .4s ease-in-out);
+                            @media #{$maxMobile} {
+                                margin-left: 10px;
+                            }
+
+                            a{
+                                text-decoration: none;
+                                color: #fff;
+                                background-color: #333;
+                                padding: 7px;
+                                width: 50px; height: 50px;
+                                line-height: 50px;
+                                display: inline-block;
+                                @include prefixs(border-radius,50%);
+                                @include prefixs(transition, all .3s ease-in-out);
+                                &:hover{
+                                    color: $btnHoverColor;
+                                    background-color: #fff;
+                                }
+                                .fa{
+                                    line-height: 30px;
+                                    padding: 5px;
+
+                                }
+                            }
+                        }
+                    }
+                }
+                .or{
+                font-size: 20px;
+                padding-top: 60px;
+                position: relative;
+                    span{
+                        color: #fff;
+                        position: relative;
+                        &:before{
+                            content: "";
+                            display: block;
+                            width: 180px;
+                            height: 2px;
+                            background-color: #777;
+                            position: absolute;
+                            top: 15px;
+                            @media #{$maxMobile} {
+                                width: 70px;
+                            }
+                        }
+
+                        &:after{
+                            content: "";
+                            display: block;
+                            width: 180px;
+                            height: 2px;
+                            background-color: #777;
+                            position: absolute;
+                            left: 30px;
+                            bottom: 10px;
+                            @media #{$maxMobile} {
+                                width: 80px;
+                            }
+
+                        }
+                    }
+                }
+                .selected{
+                    margin-top: 10px;
+                    position: relative;
+                   
+                    label{
+                        text-transform: capitalize;
+                        
+                    }
+                    select{
+                        padding: 5px;
+                        margin-left: 6px;
+                        @include prefixs(border-radius,7px);
+                    }
+                    
+                }
+
+                label{
+                    text-transform: capitalize;
+                    font-weight: 500;
+                    margin-top: 10px;
+                    margin-bottom: 20px;
+                    color: #fff;
+                }
+                input{
+                    width: 90%;
+                    padding: 10px;
+                    border: 2px solid #333;
+                    @include prefixs(border-radius,10px);
+                    position: relative;
+                }
+                .pass{
+                        position: relative;
+                        .fa-eye{
+                            position: absolute;
+                            right: 50px;
+                            top: 65px;
+                            cursor: pointer;
+                            color: #333;
+                        }
+                    
+                }
+                input[type=submit]{
+                    margin-top: 30px;
+                }
+            }
+        }
+    }
+}       
+/*End section sin up*/

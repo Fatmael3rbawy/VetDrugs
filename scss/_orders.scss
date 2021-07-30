@@ -1,0 +1,143 @@
+/* start section my order */
+.myorders{
+    overflow: hidden;
+    margin-top: 30px;
+    position: relative;
+    background-image: url("../images//slide2.jpg");
+    background-size: cover;
+    .myorder-header{
+        position: relative;
+        margin-top: 100px;
+        z-index: 2;
+        h2{
+            @include header-border;
+            font-size: 40px;
+            font-weight: bold;
+            font-style: italic;
+            color: #000;
+        }
+    }
+    .lead{
+        text-transform: capitalize;
+        word-spacing: 5px;
+        font-size: 24px;
+        font-weight: bold;
+        font-style: italic;
+        color: #fff;
+        position: relative;
+        z-index: 2;
+    }
+    .order-content{
+        margin-top: 60px;
+    }
+
+    .order{
+        border: 2px solid #333;
+        padding: 30px;
+        position: relative;
+        z-index: 2;
+        @include prefixs(border-radius,20px);
+        background-color: #fff;
+        margin-bottom: 30px;
+        
+
+        h4{
+            text-transform: capitalize;
+            display: inline-block;
+        
+            @media #{$maxMobile} {
+                font-size: 20px;
+            }
+            @media #{$minSmall} {
+                font-size: 17px;
+            }
+            @media #{$minMedium} {
+                font-size: 23px;
+            }
+        }
+        span{
+            padding-left: 20px;
+            font-size: 18px;
+            font-weight: bold;
+            color:$secendColor;
+        }
+    }
+}
+/* End section my order */
+
+
+/*start section customer order*/
+.customer{
+    overflow: hidden;
+    margin-top: 70px;
+    position: relative;
+    background-image: url("../images/customebac.jpg");
+    background-size: cover;
+    @media #{$maxMobile} {
+        margin-top: 100px;
+    }
+    .custom-header{
+        position: relative;
+        margin-top: 40px;
+        h2{
+            @include header-border;
+            font-size: 40px;
+            font-weight: bold;
+            font-style: italic;
+        }
+    }
+   
+    .lead{
+        text-transform: capitalize;
+        word-spacing: 5px;
+        font-size: 25px;
+        font-weight: bold;
+    }
+    .customer-content{
+        margin-top: 60px;
+    }
+
+    form{
+        border: 2px solid $formbordercolor;
+        padding: 20px;
+        background-color: rgba(2,2,2,.3);
+        position: relative;
+        z-index: 3;
+        @include prefixs(border-radius, 20px);
+        margin-bottom: 30px;
+        overflow: hidden;
+
+        .input-group{
+            margin-bottom: 20px;
+            .name{
+                margin-left: 77px;
+            }
+            .pname{
+                margin-left: 47px;
+            }
+            
+            .quantity{
+                margin-left: 88px;
+            }
+            .location{
+                margin-left: 0;
+            }
+            .payment{
+                margin-left: 25px;
+            }
+            
+            label{
+                text-transform: capitalize;
+                padding-right: 10px;
+                font-weight: bold;
+                color: #fff;
+                
+            }
+        
+        }
+        .button{
+            float: right;
+        }
+    }  
+}
+/*End section customer order*/

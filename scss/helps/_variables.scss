@@ -1,0 +1,156 @@
+$mainColor:#D61C62;
+$secendColor:#1446A0;
+$headerColor:#020140eb;
+$pColor :#6f6f6f;
+$navBackgroun :#f4f4f4;
+$btnHoverColor :#018AE0;
+$formBac:#ce32409e;
+$formbordercolor:#dad8e226;
+$asideprofileBac:#591584fc;
+$footerBac:#040404e0;
+$logColor:#61688e;
+
+//media 
+
+$maxMobile:"(max-width:576px)";
+$minSmall :"(min-width:578px)";
+$maxSmall:"(max-width: 991px)";
+$minMedium:"(min-width:992px)";
+$maxMedium:"(max-width:1199px)";
+$minLarge:"(min-width: 1200px)";
+
+
+.button{
+    padding: 10px 15px;
+    background-color: $secendColor;
+    color: #fff !important;
+    text-decoration: none;
+    text-transform: capitalize;
+    text-decoration: none;
+    font-size: 16px;
+    font-weight: 600;
+    margin-bottom: 13px;
+    @include prefixs(transition,all .5s ease-in-out);
+    @include prefixs(border-radius,10px 0);
+    &:hover{
+        background-color: $btnHoverColor;
+        color: #fff;
+        
+    }
+}
+.image_profile{
+    width: 30px;
+    height: 30px;
+    @include prefixs(border-radius,50%);
+}
+.clear-fixs{
+    clear: both;
+}
+
+.overlay{
+    @include overlay(rgba(2,2,2,.4));
+}
+.hidden{
+    display: none;
+}
+.menu-button{
+    padding: 10px;
+    outline: none;
+    border: none;
+    span{
+        width: 3px;
+        height: 3px;
+        display: block;
+        background-color: #444;
+        &:not(:last-of-type){
+            margin-bottom: 3px;
+        }
+    }
+}
+
+.image-logo{
+    width: 50px;
+    height: 50px;
+    padding: 2px;
+    background-color: #fff;
+    @include prefixs(border-radius,50%);
+}
+.profile_info{
+    width: 300px;
+    height: 420px;
+    border: 2px solid #222;
+    margin: 10px auto;
+    background: #fff;
+    overflow: hidden;
+    position: absolute;
+    top: 65px;
+    right: 10px;
+    z-index: 100;
+    display: none;
+
+    @include prefixs(border-radius,10px 0);
+
+    .profile-bacground{
+        img{
+            @include prefixs(border-radius,10px 0 0) ;
+        }
+         
+    }
+    .prifile-image{
+        position: relative;
+        bottom: 20px;
+        left: 45%;
+
+        img{
+            border: 1px solid #222;
+            width: 40px;
+            height: 40px;
+        }
+    }
+    .info{
+        padding: 10px;
+
+        p{
+            text-transform: capitalize;
+            span{
+                font-size: 20px;
+                font-weight: bold;
+            }
+        }
+    }
+    .edit{
+        float: right;
+        margin-right: 20px;
+        text-decoration: none;
+    }
+}
+
+.button-control{
+    position: relative;
+    left: 40%;
+    @media #{$maxMobile} {
+        left: 1%;
+    }
+    @media #{$minSmall} and #{$maxSmall} {
+        left: 30%;
+    }
+    ul{
+        
+        .active,.button{
+            background-color: $btnHoverColor;
+            color: #fff;
+        }
+        
+        li{
+            display: inline;
+            margin-left: 20px;
+            background-color: #ccc;
+            padding: 10px;
+            color: #000;
+            border: 1px solid #444;
+            font-size: 16px;
+            cursor: pointer;
+            @include prefixs(border-radius,5px);
+        }
+    }
+}
